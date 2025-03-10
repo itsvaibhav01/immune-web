@@ -37,54 +37,18 @@
 </head>
 <body>
 
-<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav> -->
-
 
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">IMMUNE<img src="./static/images/icon4.png" alt="Logo" style="height: 1em; vertical-align: middle; margin-left: 5px;"> : Improving Safety Against Jailbreaks in Multi-modal LLMs via
-            Inference-Time Alignment</h1>
+          <h1 class="title is-1 publication-title">
+            IMMUNE<img src="./static/images/icon4.png" alt="Logo" style="height: 1em; vertical-align: middle; margin-left: 5px;"> : Improving Safety Against Jailbreaks in Multi-modal LLMs via Inference-Time Alignment
+          </h1>
+          <h2 class="subtitle is-3 publication-conference">
+            <span class="tag is-info" style="font-size: 0.75em; padding: 0.75em 1.25em;">CVPR 2025</span>
+          </h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=zE8aFIwAAAAJ&hl=en">Soumya Suvra Ghosal</a><sup>1*</sup>,
@@ -202,48 +166,54 @@
   </div>
 </section>
 
-<!-- Teaser Video -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/index_teaser_1.mp4"
-                type="video/mp4">
+
+<section class="carousel-section">
+  <!-- Main Carousel Container (Fixed 16:9 ratio: 800x450) -->
+  <div class="carousel">
+    <!-- Slide 1 -->
+    <div class="slide active">
+      <video muted playsinline preload="metadata">
+        <source src="./static/videos/index_teaser_1.mp4" type="video/mp4">
       </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">IMMUNE</span>: SOTA defense against jailbreak attacks for Multimodal Language Models.
-      </h2>
     </div>
+    <!-- Slide 2 -->
+    <div class="slide">
+      <video muted playsinline preload="metadata">
+        <source src="./static/videos/index_example_1.mp4" type="video/mp4">
+      </video>
+    </div>
+    <!-- Slide 3 -->
+    <div class="slide">
+      <video muted playsinline preload="metadata">
+        <source src="./static/videos/index_example_2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <!-- Slide 4 -->
+    <div class="slide">
+      <video muted playsinline preload="metadata">
+        <source src="./static/videos/index_example_3.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- Navigation Arrows INSIDE the carousel so they align with container edges -->
+    <button class="arrow left">&#10094;</button>
+    <button class="arrow right">&#10095;</button>
   </div>
+
+  <!-- Dot Indicators -->
+  <div class="dots">
+    <span class="dot active" data-index="0"></span>
+    <span class="dot" data-index="1"></span>
+    <span class="dot" data-index="2"></span>
+    <span class="dot" data-index="3"></span>
+  </div>
+
+  <!-- Caption -->
+  <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+    <span class="dnerf">IMMUNE</span>: SOTA defense against jailbreak attacks for Multimodal Language Models.
+  </h2>
 </section>
 
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/index_example_1.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/index_example_2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/index_example_3.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <section class="section">
@@ -282,25 +252,525 @@
     <!--/ Abstract. -->
 
      <!-- Algo -->
-     <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Algorithm</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our framework, <strong>Immune</strong>, defends against jailbreak attacks by re-framing safety alignment as an inference-time controlled decoding problem. Given an adversarial prompt <em>x<sub>adv</sub></em> and a base MLLM <em>π<sub>safe</sub></em>, Immune leverages a safety-aware reward model <em>R<sub>safe</sub></em> to steer the generation toward safe outputs.
+          </p>
+          <p>
+            At each decoding step <em>t</em>, the current state is defined as <em>s<sub>t</sub> = [x<sub>adv</sub>, y<sub>&lt;t</sub>]</em>, where <em>y&lt;t</em> denotes the sequence generated so far. The algorithm then:
+          </p>
+          <div class="algorithm-code" style="text-align: left; font-family: monospace; background: #f9f9f9; padding: 1em; overflow-x: auto;">
+            <ol>
+              <li>
+                For <em>t = 0, 1, …, T</em> do:
+                <ol type="a">
+                  <li>
+                    Set the current state: <em>s<sub>t</sub> = [x<sub>adv</sub>, y&lt;t]</em>, where <em>y&lt;t</em> denotes the tokens generated so far.
+                  </li>
+                  <li>
+                    Sample the top-<em>k</em> tokens from the base model:
+                    <br>
+                    <em>V̂ = { z : z ∼ π<sub>safe</sub>(·|s<sub>t</sub>) }</em>
+                  </li>
+                  <li>
+                    For each token <em>z ∈ V̂</em>:
+                    <ol type="i">
+                      <li>
+                        Evaluate the safety value: <em>Q<sub>safe</sub>(s<sub>t</sub>, z)</em>.
+                      </li>
+                      <li>
+                        Compute the decoding score: <em>g(z) = (1/α) · Q<sub>safe</sub>(s<sub>t</sub>, z) + log π<sub>safe</sub>(z|s<sub>t</sub>)</em>.
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    Construct the probability distribution over <em>V̂</em>:
+                    <br>
+                    <em>f(z|s<sub>t</sub>) = exp(g(z)) / ∑<sub>z′∈V̂</sub> exp(g(z′))</em>
+                  </li>
+                  <li>
+                    Sample the next token: <em>y<sub>t</sub> ∼ f(·|s<sub>t</sub>)</em>.
+                  </li>
+                  <li>
+                    Update the state: <em>s<sub>t+1</sub> = [s<sub>t</sub>, y<sub>t</sub>]</em>.
+                  </li>
+                </ol>
+              </li>
+              <li>
+                Return the output sequence: <em>y = [y<sub>0</sub>, y<sub>1</sub>, …, y<sub>T</sub>]</em>.
+              </li>
+            </ol>
+          </div>
+        </div>
         <div class="publication-video">
           <!-- <img src="./static/images/index_img.jpg" alt="Publication Image" style="width: 100%; height: auto; object-fit: contain;"> -->
-          <video id="teaser" autoplay muted loop playsinline height="100%">
+          <video id="teaser" autoplay muted playsinline height="100%">
             <source src="./static/videos/algo_teaser.mp4"
                     type="video/mp4">
           </video>
         </div>
       </div>
     </div>
+    
 
     <!-- Paper index. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column">
         <h2 class="title is-3">Experiment Results</h2>
-        <div class="publication-video">
-          <img src="./static/images/teaser_index.png" alt="Publication Image" style="width: 100%; height: auto; object-fit: contain;">
+        <
+        <div class="content has-text-justified">
+          <p>
+            The table below summarizes our evaluation of various defense strategies on multi-modal large language models using a dataset of adversarial image–text pairs. In our experiments, the image inputs are manipulated under four different conditions: random noise, images generated via Stable Diffusion (SD), natural images, and blank images. Simultaneously, the textual prompts are crafted using three distinct approaches—template‐based, persuasive, and logic‐driven—to simulate a range of adversarial scenarios.
+          </p>
+          <p>
+            We use the Attack Success Rate (ASR) as our primary metric, where a lower ASR indicates a stronger defense against jailbreak attacks. All evaluations are performed using the Llama-Guard-3 Jailbreak Judge as the oracle classifier. The results demonstrate that the original decoding of these models yields high ASR values, revealing significant vulnerabilities. In contrast, our proposed method, <strong>Immune</strong>, achieves markedly lower ASR values across state-of-the-art models such as LLaVA-1.6, LLaVA-1.5, MiniGPT-4-7B, MiniGPT-4-13B, and Qwen-VL, thereby validating the efficacy of our inference-time alignment approach in enhancing model safety while preserving utility.
+          </p>
+        </div>
+        <div class="table-container">
+          <table class="table is-striped is-bordered is-hoverable is-fullwidth" 
+       style="font-size: 0.9rem; line-height: 1.2; border-collapse: collapse;" 
+       cellpadding="4">
+            <thead>
+              <tr style="background-color: #f2f2f2; color: inherit;">
+                <th rowspan="2" style="vertical-align: middle; min-width: 100px;">Model</th>
+                <th rowspan="2" style="vertical-align: middle;">Defense Strategy</th>
+                <th colspan="3" style="border-right: 2px solid #000;">Noise</th>
+                <th colspan="3" style="border-right: 2px solid #000;">SD</th>
+                <th colspan="3" style="border-right: 2px solid #000;">Nature</th>
+                <th colspan="3" style="border-right: 2px solid #000;">Blank</th>
+                <th rowspan="2" style="vertical-align: middle; min-width: 100px;">Average</th>
+              </tr>
+              <tr style="background-color: #f2f2f2; color: inherit;">
+                <th>Template</th>
+                <th>Persuade</th>
+                <th>Logic</th>
+                <th>Template</th>
+                <th>Persuade</th>
+                <th>Logic</th>
+                <th>Template</th>
+                <th>Persuade</th>
+                <th>Logic</th>
+                <th>Template</th>
+                <th>Persuade</th>
+                <th>Logic</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- LLaVA-1.6 -->
+              <tr>
+                <td rowspan="5">LLaVA-1.6</td>
+                <td>Original</td>
+                <td>66.12</td>
+                <td>37.45</td>
+                <td>78.58</td>
+                <td>67.34</td>
+                <td>37.56</td>
+                <td>77.57</td>
+                <td>69.23</td>
+                <td>40.78</td>
+                <td>82.61</td>
+                <td>66.67</td>
+                <td>39.45</td>
+                <td>81.60</td>
+                <td>60.27</td>
+              </tr>
+              <tr>
+                <td>FigStep</td>
+                <td>61.12</td>
+                <td>39.27</td>
+                <td>62.16</td>
+                <td>62.34</td>
+                <td>40.18</td>
+                <td>54.05</td>
+                <td>63.41</td>
+                <td>35.22</td>
+                <td>56.76</td>
+                <td>61.09</td>
+                <td>38.43</td>
+                <td>52.70</td>
+                <td>51.64</td>
+              </tr>
+              <tr>
+                <td>AdaShield</td>
+                <td>38.42</td>
+                <td>0.00</td>
+                <td>11.08</td>
+                <td>38.13</td>
+                <td>1.56</td>
+                <td>18.13</td>
+                <td>39.29</td>
+                <td>3.22</td>
+                <td>19.14</td>
+                <td>42.78</td>
+                <td>0.48</td>
+                <td>16.12</td>
+                <td>19.23</td>
+              </tr>
+              <tr>
+                <td>CoCA</td>
+                <td>61.23</td>
+                <td>39.17</td>
+                <td>62.16</td>
+                <td>61.34</td>
+                <td>41.28</td>
+                <td>52.70</td>
+                <td>63.11</td>
+                <td>35.22</td>
+                <td>55.41</td>
+                <td>61.09</td>
+                <td>37.36</td>
+                <td>52.70</td>
+                <td>51.37</td>
+              </tr>
+              <tr style="background-color: #dbeaff;">
+                <td><strong>Ours</strong></td>
+                <td>5.23</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>8.14</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>8.45</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>4.67</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td><strong>2.45</strong></td>
+              </tr>
+              <!-- LLaVA-1.5 -->
+              <tr>
+                <td rowspan="5">LLaVA-1.5</td>
+                <td>Original</td>
+                <td>58.12</td>
+                <td>39.44</td>
+                <td>76.56</td>
+                <td>61.47</td>
+                <td>38.35</td>
+                <td>74.55</td>
+                <td>58.22</td>
+                <td>42.11</td>
+                <td>77.57</td>
+                <td>59.33</td>
+                <td>40.26</td>
+                <td>74.55</td>
+                <td>56.39</td>
+              </tr>
+              <tr>
+                <td>FigStep </td>
+                <td>64.17</td>
+                <td>28.34</td>
+                <td>62.16</td>
+                <td>62.23</td>
+                <td>32.18</td>
+                <td>68.91</td>
+                <td>58.39</td>
+                <td>37.27</td>
+                <td>72.97</td>
+                <td>61.09</td>
+                <td>31.42</td>
+                <td>68.91</td>
+                <td>52.46</td>
+              </tr>
+              <tr>
+                <td>AdaShield </td>
+                <td>32.14</td>
+                <td>0.00</td>
+                <td>5.41</td>
+                <td>31.36</td>
+                <td>0.00</td>
+                <td>4.23</td>
+                <td>30.22</td>
+                <td>0.00</td>
+                <td>5.41</td>
+                <td>29.67</td>
+                <td>0.00</td>
+                <td>10.81</td>
+                <td>12.86</td>
+              </tr>
+              <tr>
+                <td>CoCA </td>
+                <td>59.18</td>
+                <td>26.34</td>
+                <td>35.13</td>
+                <td>58.42</td>
+                <td>30.29</td>
+                <td>35.13</td>
+                <td>49.22</td>
+                <td>32.11</td>
+                <td>28.37</td>
+                <td>59.07</td>
+                <td>23.39</td>
+                <td>37.83</td>
+                <td>39.87</td>
+              </tr>
+              <tr style="background-color: #dbeaff;">
+                <td><strong>Ours</strong></td>
+                <td>9.23</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>8.14</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>1.47</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>5.32</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td><strong>2.10</strong></td>
+              </tr>
+              <!-- MiniGPT-4-7B -->
+              <tr>
+                <td rowspan="5">MiniGPT-4-7B</td>
+                <td>Original</td>
+                <td>75.23</td>
+                <td>54.12</td>
+                <td>83.62</td>
+                <td>72.44</td>
+                <td>37.33</td>
+                <td>85.63</td>
+                <td>73.18</td>
+                <td>45.27</td>
+                <td>86.64</td>
+                <td>72.09</td>
+                <td>55.42</td>
+                <td>86.64</td>
+                <td>67.15</td>
+              </tr>
+              <tr>
+                <td>FigStep </td>
+                <td>47.22</td>
+                <td>17.18</td>
+                <td>32.43</td>
+                <td>42.13</td>
+                <td>5.37</td>
+                <td>24.32</td>
+                <td>37.29</td>
+                <td>8.45</td>
+                <td>18.92</td>
+                <td>43.08</td>
+                <td>17.41</td>
+                <td>43.24</td>
+                <td>27.74</td>
+              </tr>
+              <tr>
+                <td>AdaShield </td>
+                <td>47.23</td>
+                <td>22.14</td>
+                <td>32.24</td>
+                <td>41.37</td>
+                <td>18.46</td>
+                <td>27.20</td>
+                <td>58.15</td>
+                <td>12.28</td>
+                <td>30.22</td>
+                <td>46.09</td>
+                <td>19.43</td>
+                <td>32.24</td>
+                <td>32.21</td>
+              </tr>
+              <tr>
+                <td>CoCA </td>
+                <td>35.18</td>
+                <td>18.27</td>
+                <td>22.97</td>
+                <td>40.34</td>
+                <td>21.14</td>
+                <td>31.08</td>
+                <td>35.29</td>
+                <td>18.42</td>
+                <td>27.03</td>
+                <td>48.11</td>
+                <td>21.36</td>
+                <td>40.54</td>
+                <td>29.74</td>
+              </tr>
+              <tr style="background-color: #dbeaff;">
+                <td><strong>Ours</strong></td>
+                <td>18.23</td>
+                <td>6.12</td>
+                <td>44.59</td>
+                <td>11.34</td>
+                <td>8.27</td>
+                <td>29.72</td>
+                <td>17.18</td>
+                <td>8.45</td>
+                <td>27.02</td>
+                <td>16.09</td>
+                <td>10.37</td>
+                <td>43.24</td>
+                <td><strong>18.34</strong></td>
+              </tr>
+              <!-- MiniGPT-4-13B -->
+              <tr>
+                <td rowspan="5">MiniGPT-4-13B</td>
+                <td>Original</td>
+                <td>74.18</td>
+                <td>47.12</td>
+                <td>90.67</td>
+                <td>80.23</td>
+                <td>53.34</td>
+                <td>85.63</td>
+                <td>79.29</td>
+                <td>52.45</td>
+                <td>83.78</td>
+                <td>79.07</td>
+                <td>53.22</td>
+                <td>87.65</td>
+                <td>70.62</td>
+              </tr>
+              <tr>
+                <td>FigStep </td>
+                <td>44.13</td>
+                <td>20.28</td>
+                <td>58.11</td>
+                <td>43.22</td>
+                <td>18.47</td>
+                <td>47.30</td>
+                <td>40.36</td>
+                <td>27.14</td>
+                <td>48.65</td>
+                <td>42.09</td>
+                <td>19.42</td>
+                <td>58.11</td>
+                <td>37.41</td>
+              </tr>
+              <tr>
+                <td>AdaShield </td>
+                <td>63.22</td>
+                <td>23.18</td>
+                <td>59.44</td>
+                <td>64.47</td>
+                <td>31.12</td>
+                <td>74.55</td>
+                <td>69.15</td>
+                <td>27.35</td>
+                <td>68.91</td>
+                <td>65.09</td>
+                <td>23.41</td>
+                <td>53.39</td>
+                <td>50.55</td>
+              </tr>
+              <tr>
+                <td>CoCA </td>
+                <td>35.29</td>
+                <td>21.34</td>
+                <td>36.49</td>
+                <td>40.18</td>
+                <td>22.27</td>
+                <td>40.54</td>
+                <td>35.12</td>
+                <td>20.41</td>
+                <td>35.14</td>
+                <td>48.22</td>
+                <td>21.36</td>
+                <td>52.70</td>
+                <td>33.21</td>
+              </tr>
+              <tr style="background-color: #dbeaff;">
+                <td><strong>Ours</strong></td>
+                <td>25.17</td>
+                <td>18.29</td>
+                <td>59.44</td>
+                <td>29.34</td>
+                <td>19.41</td>
+                <td>57.42</td>
+                <td>29.22</td>
+                <td>23.18</td>
+                <td>58.43</td>
+                <td>23.47</td>
+                <td>23.37</td>
+                <td>58.43</td>
+                <td><strong>32.94</strong></td>
+              </tr>
+              <!-- Qwen-VL -->
+              <tr>
+                <td rowspan="5">Qwen-VL</td>
+                <td>Original</td>
+                <td>46.12</td>
+                <td>3.27</td>
+                <td>12.09</td>
+                <td>52.23</td>
+                <td>6.18</td>
+                <td>9.07</td>
+                <td>53.34</td>
+                <td>3.42</td>
+                <td>7.05</td>
+                <td>53.11</td>
+                <td>4.36</td>
+                <td>15.11</td>
+                <td>22.99</td>
+              </tr>
+              <tr>
+                <td>FigStep </td>
+                <td>32.18</td>
+                <td>0.00</td>
+                <td>1.35</td>
+                <td>40.42</td>
+                <td>0.00</td>
+                <td>5.41</td>
+                <td>30.23</td>
+                <td>0.00</td>
+                <td>5.41</td>
+                <td>44.12</td>
+                <td>2.23</td>
+                <td>1.35</td>
+                <td>14.42</td>
+              </tr>
+              <tr>
+                <td>AdaShield </td>
+                <td>30.17</td>
+                <td>0.00</td>
+                <td>18.13</td>
+                <td>28.34</td>
+                <td>1.29</td>
+                <td>15.11</td>
+                <td>23.28</td>
+                <td>1.37</td>
+                <td>7.05</td>
+                <td>42.11</td>
+                <td>0.41</td>
+                <td>18.13</td>
+                <td>15.88</td>
+              </tr>
+              <tr>
+                <td>CoCA </td>
+                <td>29.12</td>
+                <td>6.27</td>
+                <td>13.51</td>
+                <td>27.34</td>
+                <td>7.18</td>
+                <td>5.41</td>
+                <td>27.29</td>
+                <td>1.42</td>
+                <td>13.51</td>
+                <td>28.47</td>
+                <td>13.36</td>
+                <td>13.51</td>
+                <td>15.69</td>
+              </tr>
+              <tr style="background-color: #dbeaff;">
+                <td><strong>Ours</strong></td>
+                <td>10.27</td>
+                <td>2.18</td>
+                <td>5.41</td>
+                <td>21.34</td>
+                <td>2.29</td>
+                <td>4.03</td>
+                <td>18.22</td>
+                <td>2.35</td>
+                <td>5.41</td>
+                <td>20.17</td>
+                <td>3.37</td>
+                <td>7.05</td>
+                <td><strong>8.58</strong></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

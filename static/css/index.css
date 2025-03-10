@@ -1,22 +1,24 @@
+/* --------------------------------------------------
+   1) Global / Existing Styles
+-------------------------------------------------- */
+
 body {
   font-family: 'Noto Sans', sans-serif;
 }
 
-
 .footer .icon-link {
-    font-size: 25px;
-    color: #000;
+  font-size: 25px;
+  color: #000;
 }
 
 .link-block a {
-    margin-top: 5px;
-    margin-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .dnerf {
   font-variant: small-caps;
 }
-
 
 .teaser .hero-body {
   padding-top: 0;
@@ -27,13 +29,10 @@ body {
   font-family: 'Google Sans', sans-serif;
 }
 
-
-.publication-title {
-}
+.publication-title {}
 
 .publication-banner {
   max-height: parent;
-
 }
 
 .publication-banner video {
@@ -44,88 +43,83 @@ body {
   object-fit: fit;
 }
 
-.publication-header .hero-body {
-}
+.publication-header .hero-body {}
 
 .publication-title {
-    font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
 }
 
 .publication-authors {
-    font-family: 'Google Sans', sans-serif;
+  font-family: 'Google Sans', sans-serif;
 }
 
 .publication-venue {
-    color: #555;
-    width: fit-content;
-    font-weight: bold;
+  color: #555;
+  width: fit-content;
+  font-weight: bold;
 }
 
 .publication-awards {
-    color: #ff3860;
-    width: fit-content;
-    font-weight: bolder;
+  color: #ff3860;
+  width: fit-content;
+  font-weight: bolder;
 }
 
-.publication-authors {
-}
+.publication-authors {}
 
 .publication-authors a {
-   color: hsl(204, 86%, 53%) !important;
+  color: hsl(204, 86%, 53%) !important;
 }
 
 .publication-authors a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .author-block {
   display: inline-block;
 }
 
-.publication-banner img {
-}
+.publication-banner img {}
 
 .publication-authors {
-  /*color: #4286f4;*/
+  /* color: #4286f4; */
 }
 
 .publication-video {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-
-    overflow: hidden;
-    border-radius: 10px !important;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  border-radius: 10px !important;
 }
 
 .publication-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.publication-body img {
-}
+.publication-body img {}
 
 .results-carousel {
-  height: 100%; /* Ensure the carousel takes up available height */
-  display: flex; /* Align items horizontally */
-  justify-content: center; /* Center images/videos horizontally */
-  align-items: center; /* Center images/videos vertically */
+  height: 100%; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
 }
 
 .results-carousel .item {
-  height: 100%; 
+  height: 100%;
   margin: 5px;
   overflow: hidden;
   border: 1px solid #bbb;
   border-radius: 10px;
   padding: 0;
   font-size: 0;
-  text-align: center; /* Ensure images/videos are centered */
+  text-align: center;
 }
 
 .results-carousel video {
@@ -133,13 +127,11 @@ body {
 }
 
 .results-carousel img {
-  display: block; /* Ensures the image behaves like a block element */
-  width: 100%; /* Make the image take up the full width of the container */
-  height: auto; /* Preserve aspect ratio */
-  object-fit: contain; /* Ensures the image fits nicely without distortion */
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
-
-
 
 .interpolation-panel {
   background: #fdfdfd;
@@ -151,12 +143,7 @@ body {
   border-radius: 5px;
 }
 
-.interpolation-video-column {
-}
-
-.interpolation-panel .slider {
-  margin: 0 !important;
-}
+.interpolation-video-column {}
 
 .interpolation-panel .slider {
   margin: 0 !important;
@@ -167,4 +154,89 @@ body {
 }
 #interpolation-image-wrapper img {
   border-radius: 5px;
+}
+
+/* --------------------------------------------------
+   Carousel-Specific Styles
+-------------------------------------------------- */
+.carousel {
+  width: 100%;
+  max-width: 1100px;
+  /* height: 450px; */
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  border: 0px solid #ccc;
+  border-radius: 8px;
+  aspect-ratio: 16 / 9;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 40px;
+  text-align: center;
+  z-index: 10;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.arrow:hover {
+  background: rgba(255,255,255,1);
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #333;
 }
